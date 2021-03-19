@@ -13,7 +13,7 @@ vid02.ontimeupdate = function(){
   $("#custom-seekbar02 span").css("width", percentage02 + "%");
 };
 
-$("#custom-seekbar").on("click", function(e){
+$("#custom-seekbar").on("click", function(togglePlayPause){
     var offset = $(this).offset();
     var left = (e.pageX - offset.left);
     var totalWidth = $("#custom-seekbar").width();
@@ -22,7 +22,7 @@ $("#custom-seekbar").on("click", function(e){
     vid.currentTime = vidTime;
 });
 
-$("#custom-seekbar02").on("click", function(e){
+$("#custom-seekbar02").on("click", function(togglePlayPause02){
     var offset02 = $(this).offset();
     var left02 = (e.pageX - offset.left);
     var totalWidth02 = $("#custom-seekbar02").width();
