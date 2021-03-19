@@ -17,22 +17,39 @@
 
   <style>
 
-    #myVideo {
-      position:absolute;
-      right: 0;
-      bottom: 0;
-      z-index:0 !important;
+    .containerVideo{
+      display: flex;
+      background: none;
+      justify-content: center;
+      align-items: center;
+      height: 100vh; 
+    }
+
+    .video {
+      width: 100%;
+      z-index: -10 !important;
+    }
+
+    .c-video {
+      width: 100%;
+      max-width: 100%;
+      position: relative;
+      /*overflow: hidden;*/
     }
 
   </style>
 </head>
 
 <body>
-  <video id="myVideo" width="100%" autoplay loop>
+<div class="containerVideo">
+<div class="c-video">
+  <video class="video" width="100%" autoplay loop>
       <source src="https://tesi2020.github.io/VariableFont/E_motion/assets/video/Emotion_Trailer.mp4" type="video/mp4">
   </video>
+</div>
+</div>
 
-  <div class="btnIntro" style="background: white; z-index:20 !important; margin-bottom: 1rem; margin-left:1rem;">
+  <div class="btnIntro" style="z-index:20 !important;">
     <a href="index_Home.html">SKIP INTRO</a>
   </div>
 
