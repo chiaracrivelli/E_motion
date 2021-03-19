@@ -45,6 +45,44 @@
       /*transform: translateY(100%) translateY(-5px); */
     }
 
+    .buttonsPlayPause {
+      position: absolute;
+      top:17.5vw;
+      padding:0;
+      margin:0;
+      /*padding-left:50%;*/
+    }
+
+    .buttonsPlayPause button{
+      background: none;
+      border: 0;
+      outline: 0;
+      cursor: pointer;
+      position: absolute;
+      margin:0;
+    }
+
+    .buttonsPlayPause button:before{
+      content: "\f01d"; 
+      font-family: "FontAwesome";
+      width: 100vw;
+      height: 30vw;
+      /*top: 500px;*/
+      display: inline-block;
+      font-size: 8vw;
+      color: rgba(255,255,255,1);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .buttonsPlayPause button.play:before{
+      content: "\f01d";
+      color: rgba(255,255,255,1);
+    }
+
+    .buttonsPlayPause button.pause:before{
+      content: "";
+    }
+
   </style>
 </head>
 
