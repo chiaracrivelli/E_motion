@@ -152,8 +152,7 @@ a .active {
   float: right;
   font-family: "E_motion", sans-serif;
   position: absolute;
-  bottom: 1rem;
-
+  
   border: 1px solid rgb(255,255,255,1);
 
   outline: none;
