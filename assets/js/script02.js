@@ -1,8 +1,8 @@
-var vid = document.getElementById("video");
+var vid02 = document.getElementById("video02");
 var btn = document.getElementById('play-pause');
 
 vid.ontimeupdate = function(){
-  var percentage = ( vid.currentTime / vid.duration ) * 100;
+  var percentage = ( vid02.currentTime / vid02.duration ) * 100;
   $("#custom-seekbar02 span").css("width", percentage+"%");
 };
 
@@ -11,21 +11,21 @@ $("#custom-seekbar02").on("click", function(e){
     var left = (e.pageX - offset.left);
     var totalWidth = $("#custom-seekbar02").width();
     var percentage = ( left / totalWidth );
-    var vidTime = vid.duration * percentage;
-    vid.currentTime = vidTime;
+    var vidTime02 = vid02.duration * percentage;
+    vid02.currentTime02 = vidTime02;
 });//click()
 
 function togglePlayPause(){
 	if(video.paused){
-		btn.className = "pause";
-		video.play();
+		btn02.className02 = "pause";
+		video02.play();
 	} else {
-		btn.className = "play";
-		video.pause();
+		btn02.className02 = "play";
+		video02.pause();
 	}
 }
 
-	btn.onclick = function() {
+	btn02.onclick = function() {
 	// console.log("play!!!");
 	togglePlayPause();
 };
