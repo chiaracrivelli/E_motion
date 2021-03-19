@@ -635,7 +635,7 @@ a .active {
   transition: 0.1s;
 }
 
-@media only screen and (max-width: 768px) {
+/*@media only screen and (max-width: 768px) {
   p {
     font-size: 20px;
   }
@@ -647,7 +647,7 @@ a .active {
   .section p{
     font-size: font-size: 2.5vw;
   }
-}
+}*/
 
 @media only screen and (max-width: 535px) {
 
