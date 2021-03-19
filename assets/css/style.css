@@ -77,7 +77,6 @@ div {
 p{
     font-family: "E_motion", sans-serif;
     color: white;
-    font-size: 2.8vw;
   }
 
 
@@ -681,5 +680,9 @@ a .active {
 
   .section p{
     font-size: font-size: 5vw;
+  }
+
+  .btn {
+    margin-right: 0rem;
   }
 }
