@@ -559,11 +559,11 @@ a .active {
   border-radius: 4px;*/
 /*}*/
 
-.language a:hover {
+/*.language a:hover {
   background-color: white;
   color: black;
 }
-
+*/
 .attached a.active {
   background-color: white;
   color: black;
@@ -673,6 +673,9 @@ a .active {
     height: 2.2rem;
   }
 
+  p {
+    font-size: 2rem;
+  }
 
   .demoText p{
     font-size: 2rem;
