@@ -644,15 +644,12 @@ a .active {
   transition: 0.1s;
 }
 
-/*@media only screen and (max-width: 768px) {
-  p {
-    font-size: 20px;
-  }
-
+@media only screen and (max-width: 740px) {
   .demoText p{
-    
+    font-size: 5vw;
   }
-}*/
+  }
+}
 
 @media only screen and (max-width: 535px) {
 
