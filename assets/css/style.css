@@ -149,9 +149,9 @@ a .active {
 }
 
 .btnIntro a {
-  float: right;
   font-family: "E_motion", sans-serif;
   position: absolute;
+  float: right;
 
   border: 1px solid rgb(255,255,255,1);
 
