@@ -40,6 +40,7 @@ function togglePlayPause02(){
 	} else {
 		btn02.className = "play";
 		video02.pause();
+	}
 };
 
 btn02.onclick = function() {
