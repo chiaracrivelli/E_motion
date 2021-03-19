@@ -5,15 +5,15 @@ let micLevelSmooth = 0;
 const letter = document.getElementById("text");
 const bVoice = document.querySelector("#btnVoice");
 // const bMouse = document.querySelector("#btnMouse");
-// const bSlider = document.querySelector("#btnSlider");
+const bSlider = document.querySelector("#btnSlider");
 
 function setup(){
   mic = new p5.AudioIn();
   mic.start();
-  // getAudioContext().resume();
 }
 
 function draw(){
+
   bVoice.addEventListener("click", ()=> {
     if(bVoice.dataset.over == "false"){
       bVoice.dataset.over = "true"
@@ -72,7 +72,7 @@ function voice(){
 
 function slider() {
   bSlider.classList.add("active")
-  // bMouse.classList.remove("active")
+  bMouse.classList.remove("active")
 }
 
 window.addEventListener("deviceorientation", function(event) {
