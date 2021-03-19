@@ -649,9 +649,9 @@ a .active {
 
 @media only screen and (max-width: 535px) {
 
-  p {
-    font-size: 10px;
-  }
+/*  p {
+    font-size: 3rem;
+  }*/
 
   .topnav a{
     width: 6rem;
@@ -663,7 +663,7 @@ a .active {
     height: 1.2rem;
   }
 
-  .demoText{
+  .demoText p{
     font-size: 3rem;
   }
 }
