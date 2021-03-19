@@ -1,9 +1,16 @@
 var vid = document.getElementById("video");
+var vid02 = document.getElementById("video02");
 var btn = document.getElementById('play-pause');
+var btn02 = document.getElementById('play-pause');
 
 vid.ontimeupdate = function(){
   var percentage = ( vid.currentTime / vid.duration ) * 100;
   $("#custom-seekbar span").css("width", percentage+"%");
+};
+
+vid02.ontimeupdate = function(){
+  var percentage02 = ( vid02.currentTime / vid02.duration ) * 100;
+  $("#custom-seekbar span").css("width", percentage02+"%");
 };
 
 $("#custom-seekbar").on("click", function(e){
@@ -15,17 +22,31 @@ $("#custom-seekbar").on("click", function(e){
     vid.currentTime = vidTime;
 });//click()
 
+
 function togglePlayPause(){
-	if(video.paused){
+	if(video.paused &){
 		btn.className = "pause";
 		video.play();
 	} else {
 		btn.className = "play";
 		video.pause();
 	}
+
+	if(video02.paused &){
+		btn02.className = "pause";
+		video02.play();
+	} else {
+		btn02.className = "play";
+		video02.pause();
+	}
 }
 
-	btn.onclick = function() {
+btn.onclick = function() {
+	// console.log("play!!!");
+	togglePlayPause();
+};
+
+btn02.onclick = function() {
 	// console.log("play!!!");
 	togglePlayPause();
 };
