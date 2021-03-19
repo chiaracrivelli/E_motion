@@ -70,6 +70,10 @@ div {
   --text-ANSU: 0;
 }
 
+.section p{
+    font-size: font-size: 2.5vw;
+}
+
 p{
     font-family: "E_motion", sans-serif;
     color: white;
@@ -160,6 +164,10 @@ a .active {
   color: white;
 
   z-index: -10 !important;
+}
+
+.demo-text p{
+  font-size: 2.8vw;
 }
 
 .smile-text {
@@ -641,11 +649,7 @@ a .active {
   }
 
   .demoText p{
-    font-size: 2.8vw;
-  }
-
-  .section p{
-    font-size: font-size: 2.5vw;
+    
   }
 }*/
 
