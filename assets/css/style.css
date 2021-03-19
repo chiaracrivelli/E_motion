@@ -643,6 +643,16 @@ a .active {
   transition: 0.1s;
 }
 
+@media only screen and (min-width: 880px) {
+  .demoText p{
+    font-size: 5vw;
+  }
+
+  p {
+    font-size: 3vw;
+  }
+}
+
 @media only screen and (max-width: 880px) {
   .demoText p{
     font-size: 4vw;
