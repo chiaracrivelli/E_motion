@@ -663,6 +663,8 @@ a .active {
   }
 
   .topnav-right a{
+    float: left;
+    margin-top: 1rem;
     width: 6rem;
     height: 2.2rem;
   }
