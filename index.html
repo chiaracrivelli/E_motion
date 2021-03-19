@@ -16,22 +16,26 @@
   <script src="https://kit.fontawesome.com/e0ffcb397c.js" crossorigin="anonymous"></script>
 
   <style>
-    .video {
-      width: 100%;
-      z-index: -10 !important;
+
+    #myVideo {
+      position: fixed;
+      right: 0;
+      bottom: 0;
+      min-width: 100%;
+      min-height: 100%;
     }
+
   </style>
 </head>
 
 <body>
-    <video id="video" width="100%" autoplay>
-        <source class="video" src="https://chiaracrivelli.github.io/E_motion/assets/video/Emotion_Trailer.mp4" type="video/mp4">
-    </video>
+  <video autoplay loop id="myVideo">
+      <source src="https://tesi2020.github.io/VariableFont/E_motion/assets/video/Emotion_Trailer.mp4" type="video/mp4">
+  </video>
 
-  <div class="brn btnIntro" style="background: white; z-index:10 !important;">
+  <div class="btnIntro" style="background: white; z-index:10 !important;">
     <a href="index_Home.html">SKIP INTRO</a>
   </div>
-
 
 <script type="text/javascript">
   fetch('st.json').then(r => {
