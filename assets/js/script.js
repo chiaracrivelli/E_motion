@@ -24,7 +24,7 @@ $("#custom-seekbar").on("click", function(e){
 
 
 function togglePlayPause(){
-	if(video.paused &){
+	if(video.paused){
 		btn.className = "pause";
 		video.play();
 	} else {
@@ -32,7 +32,7 @@ function togglePlayPause(){
 		video.pause();
 	}
 
-	if(video02.paused &){
+	if(video02.paused){
 		btn02.className = "pause";
 		video02.play();
 	} else {
