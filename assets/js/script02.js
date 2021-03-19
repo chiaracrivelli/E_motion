@@ -1,17 +1,17 @@
 var vid02 = document.getElementById("video02");
-var btn = document.getElementById('play-pause');
+var btn02 = document.getElementById('play-pause');
 
-vid.ontimeupdate = function(){
-  var percentage = ( vid02.currentTime / vid02.duration ) * 100;
+vid02.ontimeupdate = function(){
+  var percentage02 = ( vid02.currentTime / vid02.duration ) * 100;
   $("#custom-seekbar02 span").css("width", percentage+"%");
 };
 
 $("#custom-seekbar02").on("click", function(e){
-    var offset = $(this).offset();
-    var left = (e.pageX - offset.left);
-    var totalWidth = $("#custom-seekbar02").width();
-    var percentage = ( left / totalWidth );
-    var vidTime02 = vid02.duration * percentage;
+    var offset02 = $(this).offset02();
+    var left02 = (e.pageX - offset02.left);
+    var totalWidth02 = $("#custom-seekbar02").width();
+    var percentage02 = ( left02 / totalWidth02 );
+    var vidTime02 = vid02.duration * percentage02;
     vid02.currentTime02 = vidTime02;
 });//click()
 
