@@ -45,15 +45,15 @@
       /*transform: translateY(100%) translateY(-5px); */
     }
 
-    .buttonsPlayPause02 {
+    .buttonsPlayPause {
       position: absolute;
-      top:50%;
+      top:17.5vw;
       padding:0;
       margin:0;
       /*padding-left:50%;*/
     }
 
-    .buttonsPlayPause02 button{
+    .buttonsPlayPause button{
       background: none;
       border: 0;
       outline: 0;
@@ -62,7 +62,7 @@
       margin:0;
     }
 
-    .buttonsPlayPause02 button:before{
+    .buttonsPlayPause button:before{
       content: "\f01d"; 
       font-family: "FontAwesome";
       width: 100vw;
@@ -74,16 +74,16 @@
       -webkit-font-smoothing: antialiased;
     }
 
-    .buttonsPlayPause02 button.play:before{
+    .buttonsPlayPause button.play:before{
       content: "\f01d";
       color: rgba(255,255,255,1);
     }
 
-    .buttonsPlayPause02 button.pause:before{
+    .buttonsPlayPause button.pause:before{
       content: "";
     }
 
-    .timeline__drag02 {
+    .timeline__drag {
         width: 1px;
         height: 20px;
         top: -10px;
@@ -93,7 +93,7 @@
         transform-origin: 0 0;
       }
 
-      #custom-seekbar02
+      #custom-seekbar
       {  
         cursor: pointer;
         height: 3px;
@@ -103,7 +103,7 @@
         position: relative;
         width: 100%;
       }
-      #custom-seekbar02 span
+      #custom-seekbar span
       {
         background-color: white;
         position: absolute;
@@ -113,31 +113,38 @@
         width: 0px;
       }
 
+/* following rule is for hiding Stack Overflow's console  */
+.as-console-wrapper{ display: none !important;}
   </style>
 </head>
 
 <body>
 <div class="containerVideo">
-  <div class="c-video">
-    <video id="video02" width="100%" controls>
-        <source class="video" src="https://chiaracrivelli.github.io/E_motion/assets/video/Emotion_Trailer.mp4" type="video/mp4">
-    </video>
+
+<div class="c-video">
+
+<video id="video" width="100%">
+    <source class="video" src="https://chiaracrivelli.github.io/E_motion/Movie.mp4" type="video/mp4">
+</video>
+
+<div class="controls">
+    <div class="buttonsPlayPause">
+      <button id="play-pause"></button>
+    </div>
 </div>
-    <div class="controls">
-        <div class="buttonsPlayPause02">
-          <button id="play-pause02"></button>
-        </div>
-      </div>
-  </div>
+</div>
+</div>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
-<div style="position: absolute; top: 50vw;"id="custom-seekbar02">
+<div style="position: absolute; top: 50vw;"id="custom-seekbar">
   <span></span>
 </div>
 
+</div>
   <a class="btnIntro" href="index_Home.html" style="z-index:20 !important;">SKIP INTRO</a>
+</div>
 
-  <script src="assets/js/script.js"></script>
+<script src="assets/js/script_02.js"></script>
 
 </body>
 </html>
