@@ -654,7 +654,13 @@ a .active {
   }
 
   .topnav a{
-    font-size: 0.8rem;
+    width: 6rem;
+    height: 1.2rem;
+  }
+
+  .topnav-right a{
+    width: 6rem;
+    height: 1.2rem;
   }
 
   .demoText{
