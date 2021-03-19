@@ -41,28 +41,22 @@
 <body>
 <div class="containerVideo">
 <div class="c-video">
-  <video id="video" class="video" autoplay preload="none">
+  <video id="video_background" class="video" preload="true">
       <source src="https://chiaracrivelli.github.io/E_motion/assets/video/Emotion_Trailer.mp4" type="video/mp4">
   </video>
 </div>
 </div>
     <a class="btnIntro" href="index_Home.html" style="z-index:20 !important;">SKIP INTRO</a>
 
-    <script>
-      // Show loading animation.
-      var playPromise = video.play();
+<script>
+    var video = document.getElementById("video_background");
+    video.addEventListener("canplay", function() {
+      setTimeout(function() {
+        video.play();
+      }, 2000);
+    });
+</script>
 
-      if (playPromise !== undefined) {
-        playPromise.then(_ => {
-          // Automatic playback started!
-          // Show playing UI.
-        })
-        .catch(error => {
-          // Auto-play was prevented
-          // Show paused UI.
-        });
-      }
-    </script>
 </body>
 </html>
 
