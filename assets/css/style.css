@@ -657,14 +657,15 @@ a .active {
     font-size: 3rem;
   }*/
 
-  .topnav a{
+  .topnav{
     width: 6rem;
     height: 2.2rem;
   }
 
-  .topnav-right a{
+  .topnav-right{
     float: left;
-    margin-top: 1rem;
+    margin-top: 0.5rem;
+    margin-left: 1rem;
     width: 6rem;
     height: 2.2rem;
   }
