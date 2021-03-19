@@ -254,7 +254,7 @@ a .active {
 
 .slider-container {
   position: absolute;
-  bottom: 3rem;
+  bottom: 5rem;
   width: 100%;
   display: grid;
   grid-template-columns: 3fr 3fr 3fr 3fr;
