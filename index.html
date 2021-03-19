@@ -43,12 +43,27 @@
 <body>
 <!-- <div class="containerVideo"> -->
 <!-- <div class="c-video"> -->
-  <video class="video" autoplay loop>
+  <video id="video" class="video" controls autoplay>
       <source src="https://tesi2020.github.io/VariableFont/E_motion/assets/video/Emotion_Trailer.mp4" type="video/mp4">
   </video>
 <!-- </div> -->
 <!-- </div> -->
     <a class="btnIntro" href="index_Home.html" style="z-index:20 !important;">SKIP INTRO</a>
+
+    <script>
+      function progress(){
+      video = this;
+      if (video.bufferedPercent() > .95 && video.paused()) {
+        video.play();
+      }
+    }
+
+    $(document).ready(function() {
+       _V_("video").ready(function(){
+          this.on("progress", progress);
+      });
+    });
+    </script>
 </body>
 </html>
 
