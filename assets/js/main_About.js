@@ -10,10 +10,10 @@ const bVoice = document.querySelector("#btnVoice");
 function setup(){
   mic = new p5.AudioIn();
   mic.start();
+  // getAudioContext().resume();
 }
 
 function draw(){
-
   bVoice.addEventListener("click", ()=> {
     if(bVoice.dataset.over == "false"){
       bVoice.dataset.over = "true"
