@@ -49,34 +49,6 @@
 </div>
 </div>
     <a class="btnIntro" href="index_Home.html" style="z-index:20 !important;">SKIP INTRO</a>
-
-<script type="text/javascript">
-  fetch('st.json').then(r => {
-    return r.json()
-  }).then(json => {
-    const out   = document.querySelector('#out')
-    const video = document.querySelector('video')
-    const sottoTitoli = json
-
-    setInterval(function(){
-      const t = video.currentTime * 1000
-        out.innerHTML = find(sottoTitoli, t)
-      }, 20);
-    })
-
-    function find(vt, t){
-      for (const e of vt) {
-        if (t >= e.start && t <= e.end) {
-          return e.part
-          }
-        }
-      return ''
-    }
-</script>
-
-<script src="assets/js/main_slider_Video.js"></script>
-<script src="assets/js/script.js"></script>
-
 </body>
 </html>
 
