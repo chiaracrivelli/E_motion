@@ -656,4 +656,8 @@ a .active {
   .topnav a{
     font-size: 0.8rem;
   }
+
+  .demoText{
+    font-size: 3rem;
+  }
 }
