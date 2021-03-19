@@ -31,7 +31,7 @@ function togglePlayPause(){
 btn.onclick = function() {
 	// console.log("play!!!");
 	togglePlayPause();
-};
+}
 
 function togglePlayPause02(){
 	if(video02.paused){
