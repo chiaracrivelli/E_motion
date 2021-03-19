@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>About</title>
+  <meta name="description"              content="About">
+  <meta name="author"                             content="Chiara Crivelli">
+  <meta name="viewport"                 content="width=device-width, initial-scale=1">
+  <meta name="mobile-web-app-capable"         content="yes">
+  <meta name="apple-mobile-web-app-capable"       content="yes">
+  <meta name="theme-color"              content="black">
+  <meta name="msapplication-navbutton-color"      content="black">
+  <meta name="apple-mobile-web-app-status-bar-style"  content="black">
+  <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="assets/css/style.css">
+
+</head>
+<body>
+
+<main class="buttonVariable">  
+  <div id="myDIV">
+    <button class="btn btnVoice" id="btnVoice">Voice</button>
+    <!-- <button class="btn btnMouse" id="btnMouse">Mouse</button> -->
+    <button class="btn active" id="btnSlider">Slider</button>
+  </div>
+</main>
+
+  <div class="language" style="padding-top: 5rem">
+    <a onclick="change('[E·motion] it’s a Typeface designed for a film or small clip subtitles. <br> [E·motion] have been conceived not only to translate the dialogue, in fact he rebuilds the emotion and sound effect of the different scenes you see on videos. The font presents nine variables emotion with also a neutral weight one. The choice of this nine variable emotions, has been based on the studies of the emotions by Robert Plutchik and Paul Elkman, who has found the eight primal emotions. Based on these researches, emotions are made visible by our face body language.<br><h3>GRAPHIC & TYPE DESIGN<br>Chiara Crivelli<br>Bachelor in Comunicazione Visiva<br>2019–2020<br><br>MANY THANKS TO<br>Sylvain Esposito<br>La mia famiglia<br>I miei amici</h3>' );">English</a>
+    <a onclick="change('[E·motion] è un carattere tipografico ideato per il testo dei sottotitoli presenti nei film e nei video cinematografici.<br>[E·motion] è stato concepito al fine di tradurre non solamente i dialoghi pronunciati dai narratori, ma ricostruisce in modo tipografico un ambiente emotivo e l’aspetto sonoro.Il carattere presenta otto varianti emotive ed un peso neutrale. La scelta di una suddivisione in nove pesi differenti deriva dalle ricerche sulle emozioni realizzate da Robert Plutchik e Paul Ekman, i quali hanno definito le otto emozioni primarie. Secondo i rispettivi studi queste sensazioni sono percettibili sull’espressione facciale.<br><h3>GRAFICA  & TYPE DESIGN<br>Chiara Crivelli<br>Bachelor in Comunicazione Visiva<br>2019–2020<br><br>GRAZIE MILLE A<br>Sylvain Esposito<br>La mia famiglia<br>I miei amici</h3>');">Italiano</a>
+  </div>
+
+<main class="container">
+    <div id="elements">
+      <div id="text" style=" font-size: 2rem; text-align: left; margin-left: 1rem; margin-right: 20vw; margin-top: 10rem;" class="demo-text">
+        <p>[E·motion] è un carattere tipografico ideato per il testo dei sottotitoli presenti nei film e nei video cinematografici.<br>[E·motion] è stato concepito al fine di tradurre non solamente i dialoghi pronunciati dai narratori, ma ricostruisce in modo tipografico un ambiente emotivo e l’aspetto sonoro.Il carattere presenta otto varianti emotive ed un peso neutrale. La scelta di una suddivisione in nove pesi differenti deriva dalle ricerche sulle emozioni realizzate da Robert Plutchik e Paul Ekman, i quali hanno definito le otto emozioni primarie. Secondo i rispettivi studi queste sensazioni sono percettibili sull’espressione facciale.<br><h3>GRAFICA  & TYPE DESIGN<br>Chiara Crivelli<br>Bachelor in Comunicazione Visiva<br>2019–2020<br><br>GRAZIE MILLE A<br>Sylvain Esposito<br>La mia famiglia<br>I miei amici</h3></p>
+    </div>
+    </div>
+
+    <div class="topnav">
+    <a href="index.html">[E·motion]</a>
+    <a href="index_About.html" class="active">About</a>
+    <div class="topnav-right">
+      <a href="index_Specimen.html">Specimen</a>
+      <a href="index_Trial.html">Trial</a>
+    </div>
+  </div>
+
+    <!-- SAJO Controls -->
+    <div class="slider-container">
+      <input type="range" min="-100" max="100" value="0" class="slider" id="text-SAJO" name="text-SAJO" data-index="0">
+    <!-- DITR Controls -->
+      <input type="range" min="-100" max="100" value="0" class="slider" id="text-DITR" name="text-DITR" data-index="1">
+    <!-- ANFE Controls -->
+      <input type="range" min="-100" max="100" value="0" class="slider" id="text-ANFE" name="text-ANFE" data-index="2">
+    <!-- ANSU Controls -->
+      <input type="range" min="-100" max="100" value="0" class="slider" id="text-ANSU" name="text-ANSU" data-index="2">
+
+      <div class="slider-controls">
+        <label for="text-SAJO" class="slider-label-left">Sadness/ Joy </label>
+        <label for="text-SAJO" class="slider-label-right">
+        [<span class="output" data-index="0">0</span>] 
+        </label>
+      </div>
+
+      <div class="slider-controls">
+        <label for="text-DITR" class="slider-label-left">Disgust/ Trust</label>
+        <label for="text-SAJO" class="slider-label-right">
+        [<span class="output" data-index="1">0</span>] 
+        </label>
+      </div>
+
+      <div class="slider-controls">
+        <label for="text-ANFE" class="slider-label-left">Anger/ Fear</label>
+        <label for="text-SAJO" class="slider-label-right">
+        [<span class="output" data-index="2">0</span>] 
+        </label>
+      </div>
+
+      <div class="slider-controls">
+        <label for="text-ANSU" class="slider-label-left">Anticipation/ Surprise</label>
+        <label for="text-SAJO" class="slider-label-right">
+          [<span class="output" data-index="3">0</span>] 
+        </label>
+      </div>
+    </div>
+  </main>
+<!-- <p class="copyright">© 2020 SUPSI – Chiara Crivelli</button> -->
+
+  <script>
+  // Add active class to the current button (highlight it)
+  var header = document.getElementById("myDIV");
+  var btns = header.getElementsByClassName("btn");
+  for (var i = 0; i < btns.length; i++) {
+    btns[i].addEventListener("click", function() {
+    var current = document.getElementsByClassName("active");
+    if (current.length > 0) { 
+      current[0].className = current[0].className.replace(" active", "");
+    }
+    this.className += " active";
+    });
+  }
+</script>
+
+<script type="text/javascript">
+  document.ontouchmove = function(e){
+    e.preventDefault();
+  }
+  document.ontouchmove = function(e){
+    e.preventDefault();
+  }
+</script>
+
+<script>
+  function change(text) {
+    document.getElementById('text').innerHTML = text;
+  }
+</script>
+
+<script src="assets/js/main_slider.js"></script>
+<script src="assets/js/main_About.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.11/p5.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.11/addons/p5.dom.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.11/addons/p5.sound.min.js"></script>
+
+</body>
+
+
+</html>

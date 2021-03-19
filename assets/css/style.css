@@ -1,0 +1,635 @@
+html {
+  box-sizing: border-box;
+  display: block !important;
+  background-color: black;
+  color: black;
+}
+
+*, *:before, *:after {
+  /*box-sizing: inherit;*/
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding:0;
+  background-color: black;
+  color: white;
+  -webkit-font-smoothing: antialiased;
+}
+
+div {
+  display: block;
+}
+
+.disable-scroll{
+    top:0;
+    overflow: hidden;
+    position: fixed;
+    /*touch-action: none;*/
+}
+
+.disable-select {
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;  /* iOS Safari */
+    -webkit-user-select: none;    /* Safari */
+    -khtml-user-select: none;     /* Konqueror HTML */
+    -moz-user-select: none;     /* Firefox */
+    -ms-user-select: none;      /* Internet Explorer/Edge */
+    user-select: none;
+}
+
+.disable-pointer {
+    pointer-events: none;
+}
+
+.debug{
+    font-size: 0.75em;
+    position: absolute;
+    left:30px;
+    top:30px;
+    background-color: yellow;
+    color: black;
+    display: block;
+    font-family: monospace;
+}
+
+@font-face {
+  font-family: 'E_motion';
+  src: url('E_motionGX.ttf') format('truetype-variations');
+  font-stretch: 75% 100%;
+  font-style: oblique 0deg 12deg;
+  font-weight: 100 900;
+  -webkit-font-smoothing: antialiased;
+}
+
+:root {
+  --text-SAJO: 0;
+  --text-DITR: 0;
+  --text-ANFE: 0;
+  --text-ANSU: 0;
+}
+
+p{
+    font-family: "E_motion", sans-serif;
+    color: white;
+  }
+
+
+h3 {
+  font-family: "E_motion", sans-serif;
+  font-size: 0.95rem;
+}
+
+a .active {
+  background-color: white;
+  color: black;
+} 
+
+.buttonVariable {
+  position: absolute;
+  bottom: 8rem;
+  right: 1rem;
+}
+
+.btn {
+  font-family: "E_motion", sans-serif;
+  border: 1px solid rgb(255,255,255,1);
+  outline: none;
+  padding: .35rem .35rem .45rem .35rem;
+  /*padding: .35rem .35rem .45rem .35rem;*/
+  cursor: pointer;
+  margin-right: 1rem;
+  font-size: 1rem;
+  opacity: 1;
+  text-align: center;
+  text-decoration:none;
+  width: 7rem;
+  height: 2.2rem;
+  margin-top: 1rem;
+  border-radius: 4px;
+  display: block;
+  background-color: black;
+  color: white;
+}
+
+/* Style the active class, and buttons on mouse-over */
+.active, .btn:hover, .btn:active {
+  background-color: white;
+  color: black;
+}
+
+.container {
+  font-family: "E_motion", sans-serif;
+  text-align: center;
+  background-color: black;
+  color: white;
+}
+
+.container-specimen {
+  font-family: "E_motion", sans-serif;
+  display: grid;
+  margin-right: 1rem;
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding-top: 1rem;
+}
+
+/*.container-text {
+  font-family: "E_motion", sans-serif;
+  display: grid;
+  grid-template-columns: 9fr 3fr;
+  background-color: white;
+  color: black;
+}*/
+
+.demo-text {
+  font-family: "E_motion", sans-serif;
+
+  /*font-size: "font-size";*/
+  /*font-size: 10rem;*/
+  font-SAJO: var(--text-SAJO);
+  font-ANFE: var(--text-ANFE);
+  font-DITR: var(--text-DITR);
+  font-ANSU: var(--text-ANSU);
+  font-variation-settings: "SAJO" var(--text-SAJO), "DITR" var(--text-DITR), "ANFE" var(--text-ANFE), "ANSU" var(--text-ANSU);
+
+  background-color: black;
+  color: white;
+
+  z-index: -10 !important;
+}
+
+.smile-text {
+  font-family: "E_motion", sans-serif;
+
+  /*font-size: "font-size";*/
+  /*font-size: 10rem;*/
+  font-SAJO: var(--text-SAJO);
+  font-ANFE: var(--text-ANFE);
+  font-DITR: var(--text-DITR);
+  font-ANSU: var(--text-ANSU);
+  font-variation-settings: "SAJO" var(--text-SAJO), "DITR" var(--text-DITR), "ANFE" var(--text-ANFE), "ANSU" var(--text-ANSU);
+
+  background-color: black;
+  color: white;
+
+  z-index: -10 !important;
+}
+
+.about-text {
+  font-family: "E_motion", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position:absolute;
+  border: none;
+  outline: none;
+  user-select: none;
+
+  /*font-size: "font-size";*/
+  font-size: 2rem;
+  font-SAJO: var(--text-SAJO);
+  font-ANFE: var(--text-ANFE);
+  font-DITR: var(--text-DITR);
+  font-ANSU: var(--text-ANSU);
+  font-variation-settings: "SAJO" 0, "DITR" 0, "ANFE" 0, "ANSU" 0;
+  
+  padding: 0;
+  margin-top: 1rem;
+  margin-left: 1rem;
+  text-align: left;
+  background-color: black;
+  color: white;
+
+  z-index:-1;
+}
+
+.Text {
+  font-family: "E_motion", sans-serif;
+  margin-top: 0rem;
+  margin-left: 1rem;
+  padding-left: 1.5rem;
+  margin-right: 1rem;;
+  padding-right: 1.5rem;;
+  padding-bottom: 1.5rem;;
+  text-align: center;
+  font-size: 3.5rem;
+  background-color: black;
+  color: white;
+  text-align: center;
+  border: 0.2px solid rgb(255,255,255,0.5);
+  border-radius: 20px;
+  padding-top: 1rem;
+
+  /*border: none;*/
+  outline: none;
+
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  height: 100%
+}
+
+.sentence-col {
+}
+
+.Style {
+  font-family: "E_motion", sans-serif;
+  margin-top: 0;
+  text-align: center;
+  background-color: white;
+  color: black;
+}
+
+.controls {
+}
+
+.output {
+  font-size: 0.95em;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.slider-container {
+  position: absolute;
+  bottom: 3rem;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 3fr 3fr 3fr 3fr;
+  padding: 0rem 0rem 0rem 1.5rem;
+  background-color: black;
+  /*color: black;*/
+  z-index: 21 !important;
+} 
+
+.slider-controls {
+  font-family: "E_motion", sans-serif;
+  grid-template-columns: 1.5fr 1.5fr 1.5fr 1.5fr 1.5fr 1.5fr 1.5fr 1.5fr;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0.5rem;
+  background-color: black;
+  /*color: black;*/
+}
+
+.slider-label {
+  font-size: 0.95em;
+  margin-right: 2.25vw;
+  color: white;
+  text-align: right;
+  font-style: normal;
+  font-weight: 650;
+  background-color: black;
+  color: none;
+}
+
+.slider-label-right {
+  font-size: 0.95em;
+  margin-right: 2.25vw;
+  color: white;
+  text-align: right;
+  font-style: normal;
+  font-weight: 650;
+  background-color: black;
+  color: none;
+}
+
+.slider-label-left {
+  font-size: 0.95em;
+  text-align: left;
+  font-style: normal;
+  font-weight: 650;
+  background-color: black;
+  color: none;
+}
+
+.slider {
+  font-family: "E_motion", sans-serif;
+  -webkit-appearance: none;
+  width: 90%;
+  height: 2px;
+  opacity: 1;
+  border-radius: .25rem;
+  -webkit-transition: .2s;
+  transition: .2s;
+  outline: none;
+  background-color: none;
+  /*color: black;*/
+}
+
+.slider1 {
+  font-family: "E_motion", sans-serif;
+  -webkit-appearance: none;
+  width: 90%;
+  height: 2px;
+  opacity: 1;
+  border-radius: .25rem;
+  -webkit-transition: .2s;
+  transition: .2s;
+  outline: none;
+  background-color: white;
+  /*color: black;*/
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: ;
+  appearance: none;
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+  background-color: rgba(255,255,255,1);
+}
+
+.slider1::-webkit-slider-thumb {
+  -webkit-appearance: ;
+  appearance: none;
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+  background-color: rgba(255,255,255,1);
+}
+
+.slider::-moz-range-thumb {
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 100%;
+  background-color: rgb(0,0,0,1);
+}
+
+.slider1::-moz-range-thumb {
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 100%;
+  background-color: rgb(255,255,255,1);
+}
+
+.slider::-webkit-slider-thumb:active {
+  cursor: -webkit-grabbing;
+}
+
+.slider1::-webkit-slider-thumb:active {
+  cursor: -webkit-grabbing;
+}
+
+.slider::-moz-range-thumb:active {
+  cursor: -moz-grabbing;
+}
+
+.slider1::-moz-range-thumb:active {
+  cursor: -moz-grabbing;
+}
+.topnav {
+  overflow: hidden;
+  background-color: black;
+  position: fixed;
+  top: 0.5rem;
+  width:100%;
+  padding: 1rem .25rem .35rem .25rem;
+  font-family: "E_motion", sans-serif;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  font-size: 0.95rem;
+
+  z-index: 10;
+}
+
+.topnav-right {
+  float: right;
+  background-color: black;
+  color: white;
+  margin-right: 1rem;
+}
+
+.nav {
+  overflow: hidden;
+  background-color: black;
+  position: fixed;
+  top: 0;
+  width:100%;
+  padding: 1rem .25rem .35rem .25rem;
+  font-family: "E_motion", sans-serif;
+  font-size: 0.95rem;
+  margin-left: 1rem;
+
+  z-index: 10;
+}
+
+.language {
+  overflow: hidden;
+  background-color: black;
+  position: fixed;
+  top: 0;
+  width:100%;
+  padding: 1rem .25rem .35rem .25rem;
+  font-family: "E_motion", sans-serif;
+  font-size: 0.95rem;
+  margin-left: 1rem;
+
+  z-index: 10;
+}
+
+.topnav a {
+  font-family: "E_motion", sans-serif;
+
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  /*padding: 1em 1em;*/
+  text-decoration: none;
+  font-size: 1em;
+  border: 1px solid rgb(255,255,255,1);
+  width: 7rem;
+  height: 2.2rem;
+
+  margin-right: 1rem;
+  padding: .45rem .35rem .45rem .35rem;
+  border-radius: 4px;
+
+  background-color:none;
+
+  opacity: 1;
+}
+
+.topnav-right a {
+  font-family: "E_motion", sans-serif;
+
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  /*padding: 1em 1em;*/
+  text-decoration: none;
+  font-size: 1em;
+  border: 1px solid rgb(255,255,255,1);
+  width: 7rem;
+  height: 2.2rem;
+
+  margin-right: 1rem;
+  padding: .45rem .35rem .45rem .35rem;
+  border-radius: 4px;
+
+  background-color:none;
+
+  opacity: 1;
+}
+
+.topnav-right a:hover {
+  color: black;
+  background-color: white;
+  border: 1px solid rgb(255,255,255,1);
+  opacity: 1;
+}
+
+
+.topnav a:hover {
+  color: black;
+  background-color: white;
+  border: 1px solid rgb(255,255,255,1);
+  opacity: 1;
+}
+
+.nav a {
+  font-family: "E_motion", sans-serif;
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  /*padding: 1em 1em;*/
+  text-decoration: none;
+  font-size: 1em;
+  border: 1px solid rgb(255,255,255,1);
+  width: 7rem;
+  height: 2.2rem;
+
+  margin-right: 1rem;
+  padding: .35rem .35rem .45rem .35rem;
+  border-radius: 4px;
+
+}
+
+.nav a:hover {
+  background-color: white;
+  color: black;
+}
+
+.attached a {
+  float: left;
+  color: white;
+  font-family: "E_motion", sans-serif;
+  border: 1px solid white;
+  margin-right: 1rem;
+  cursor: pointer;
+  font-size: 1rem;
+  opacity: 1;
+  padding: .35rem .35rem .45rem .35rem;
+  text-align: center;
+  outline: none;
+  text-decoration:none;
+  width: 5.8rem;
+  background-color: black;
+}
+
+.language a {
+  font-family: "E_motion", sans-serif;
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  /*padding: 1em 1em;*/
+  text-decoration: none;
+  font-size: 1em;
+  border: 1px solid rgb(255,255,255,2);
+  width: 7rem;
+  height: 2.2rem;
+
+  margin-right: 1rem;
+  padding: .35rem .35rem .45rem .35rem;
+  border-radius: 4px;
+}
+
+.language a:hover {
+  background-color: white;
+  color: black;
+}
+
+.attached a.active {
+  background-color: white;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: white;
+  color: black;
+  border: 1px solid rgb(255,255,255,1);
+  opacity: 1;
+}
+
+.topnav-right a.active {
+  background-color: white;
+  color: black;
+  border: 1px solid rgb(255,255,255,1);
+  opacity: 1;
+}
+
+.language a.active {
+  background-color: white;
+  color: black;
+  opacity: 1;
+}
+
+.topnav-right {
+  float: right;
+  background-color: black;
+  color: white;
+}
+
+.attached-right {
+  float: right;
+  background-color: rgba(0,0,0,1);
+  color: white;
+}
+
+.language-right {
+  float: right;
+  background-color: black;
+  color: white;
+}
+
+/*.textarea {
+  padding: 0;
+  margin: 0;
+  border: none;
+  box-shadow: none;
+}*/
+
+.button {
+  width: 30px;
+  height: 30px;
+  display: block;
+  top: 10px;
+  right: 10px;
+  border-radius: 100%;
+  bottom: 20px; 
+  margin-left: 40px;
+  margin-top: 6px;
+  transition: 0.1s;
+  background: none;
+}
+
+.button:hover {
+  width: 30px;
+  height: 30px;
+  background: none;
+  color: white;
+  display: block;
+  top: 10px;
+  right: 10px;
+  border-radius: 100%;
+  bottom: 20px; 
+  margin-left: 40px;
+  margin-top: 6px;
+  transition: 0.1s;
+}

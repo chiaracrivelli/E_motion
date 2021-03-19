@@ -1,7 +1,234 @@
 <!DOCTYPE html>
-<html>
-<body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
+<html lang="en" style="background-color:black; margin:0; padding: 0;">
+<head>
+  <meta charset="UTF-8">
+  <title>[E·motion]</title>
+  <meta name="description"              content="Video">
+  <meta name="author"                             content="Chiara Crivelli">
+  <meta name="viewport"                 content="width=device-width, initial-scale=1">
+  <meta name="mobile-web-app-capable"         content="yes">
+  <meta name="apple-mobile-web-app-capable"       content="yes">
+  <meta name="theme-color"              content="black">
+  <meta name="msapplication-navbutton-color"      content="black">
+  <meta name="apple-mobile-web-app-status-bar-style"  content="black">
+  <link rel="stylesheet" href="assets/css/style.css">
+  
+  <script src="https://kit.fontawesome.com/e0ffcb397c.js" crossorigin="anonymous"></script>
+
+  <style>
+
+    .containerVideo{
+      display: flex;
+      background: none;
+      justify-content: center;
+      align-items: center;
+      height: 100vh; 
+    }
+
+    .video {
+      width: 100%;
+      z-index: -10 !important;
+    }
+
+    .c-video {
+      width: 100%;
+      max-width: 100%;
+      position: relative;
+      /*overflow: hidden;*/
+    }
+
+/*    .c-video:hover .controls {
+      transform: translateY(0); 
+    }*/
+
+    .controls {
+      display: flex;
+      position: absolute;
+      top: 7vw;
+      flex-wrap: wrap;
+      width: 100%;
+      background-color: black;
+      /*transform: translateY(100%) translateY(-5px); */
+    }
+
+    .buttonsPlayPause {
+      position: absolute;
+      top:17.5vw;
+      padding:0;
+      margin:0;
+      /*padding-left:50%;*/
+    }
+
+    .buttonsPlayPause button{
+      background: none;
+      border: 0;
+      outline: 0;
+      cursor: pointer;
+      position: absolute;
+      margin:0;
+    }
+
+    .buttonsPlayPause button:before{
+      content: "\f01d"; 
+      font-family: "FontAwesome";
+      width: 100vw;
+      height: 30vw;
+      /*top: 500px;*/
+      display: inline-block;
+      font-size: 8vw;
+      color: rgba(255,255,255,0.8);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .buttonsPlayPause button.play:before{
+      content: "\f01d";
+      color: rgba(255,255,255,0.8);
+    }
+
+    .buttonsPlayPause button.pause:before{
+      content: "";
+    }
+
+    .timeline__drag {
+        width: 1px;
+        height: 20px;
+        top: -10px;
+        background-color: yellow;
+        position: absolute;
+        z-index: 2;
+        transform-origin: 0 0;
+      }
+
+      #custom-seekbar
+      {  
+        cursor: pointer;
+        height: 3px;
+        margin-bottom: 10px;
+        outline: none;
+        overflow: hidden;
+        position: relative;
+        width: 100%;
+      }
+      #custom-seekbar span
+      {
+        background-color: white;
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 3px;
+        width: 0px;
+      }
+
+/* following rule is for hiding Stack Overflow's console  */
+.as-console-wrapper{ display: none !important;}
+
+  </style>
+</head>
+
+<body style="background-color:black; margin:0; padding: 0;">
+
+    <div class="topnav" style="background: none;">
+      <a href="index.html" class="active">[E·motion]</a>
+      <a href="index_About.html">About</a>
+      <div class="topnav-right" style="background: none;">
+        <a href="index_Specimen.html">Specimen</a>
+        <a href="index_Trial.html">Trial</a>
+      </div>
+    </div>
+
+<div class="containerVideo">
+
+<div class="c-video">
+
+<video id="video" width="100%">
+    <source class="video" src="https://tesi2020.github.io/VariableFont/E_motion/Movie.mp4" type="video/mp4">
+</video>
+
+<div class="controls">
+    <div class="buttonsPlayPause">
+      <button id="play-pause"></button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+<div style="position: absolute; top: 50vw;"id="custom-seekbar">
+  <span></span>
+</div>
+
+<main class="container">
+    <div id="elements">
+    <div id="text">
+      <p style="display: flex; justify-content: center; align-items: center; position:absolute; top: 75%; left: 50%; transform: translate(-50%, -50%); -webkit-text-stroke-width:0.65px; -webkit-text-fill-color:rgba(255,255,255,1); font-size: 2.8vw; color: #000; z-index:10 !important; background: none;" class="demo-text" id="out"></p>
+    </div>
+    </div>
+
+    <div class="hover">
+      <div class="slider-container" style="background: none; color: white; position:absolute; bottom: 2.5rem">
+        <input type="range" min="-100" max="100" value="0" class="slider1" id="text-SAJO" name="text-SAJO" data-index="0">
+        <input type="range" min="-100" max="100" value="0" class="slider1" id="text-DITR" name="text-DITR" data-index="1">
+        <input type="range" min="-100" max="100" value="0" class="slider1" id="text-ANFE" name="text-ANFE" data-index="2">
+        <input type="range" min="-100" max="100" value="0" class="slider1" id="text-ANSU" name="text-ANSU" data-index="3">
+
+        <div class="slider-controls" style="background:none; color: white;">
+          <label for="text-SAJO" style="background:none; color:white;" class="slider-label-left">Sadness/ Joy </label>
+          <label for="text-SAJO" style="background:none; color:white;" class="slider-label-right">
+          [<span class="output" style="background:none; color: white;" data-index="0">0</span>] 
+          </label>
+        </div>
+
+        <div class="slider-controls" style="background:none; color: white;">
+          <label for="text-DITR" style="background:none; color: white;" class="slider-label-left">Disgust/ Trust</label>
+          <label for="text-SAJO" style="background:none; color: white;" class="slider-label-right">
+          [<span class="output" style="background:none; color:white;" data-index="1">0</span>] 
+          </label>
+        </div>
+
+        <div class="slider-controls" style="background:none; color: white;">
+          <label for="text-ANFE" style="background:none; color: white;" class="slider-label-left">Anger/ Fear</label>
+          <label for="text-SAJO" style="background:none; color: white;" class="slider-label-right">
+          [<span class="output" style="background:none; color: white;" data-index="2">0</span>] 
+          </label>
+        </div>
+
+        <div class="slider-controls" style="background:none; color: white;">
+          <label for="text-ANSU" style="background:none; color: white;" class="slider-label-left">Anticipation/ Surprise</label>
+          <label for="text-SAJO" style="background:none; color: white;" class="slider-label-right">
+            [<span class="output" style="background:none; color: white;" data-index="3">0</span>] 
+          </label>
+        </div>
+      </div>
+    </div>
+  </main>
+
+<script type="text/javascript">
+  fetch('st.json').then(r => {
+    return r.json()
+  }).then(json => {
+    const out   = document.querySelector('#out')
+    const video = document.querySelector('video')
+    const sottoTitoli = json
+
+    setInterval(function(){
+      const t = video.currentTime * 1000
+        out.innerHTML = find(sottoTitoli, t)
+      }, 20);
+    })
+
+    function find(vt, t){
+      for (const e of vt) {
+        if (t >= e.start && t <= e.end) {
+          return e.part
+          }
+        }
+      return ''
+    }
+</script>
+
+<script src="assets/js/main_slider_Video.js"></script>
+<script src="assets/js/script.js"></script>
+
 </body>
 </html>
+
