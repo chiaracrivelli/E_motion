@@ -13,7 +13,7 @@ vid02.ontimeupdate = function(){
   $("#custom-seekbar02 span").css("width", percentage02 + "%");
 };
 
-$("#custom-seekbar").on("click", function(togglePlayPause){
+$("#custom-seekbar").on("click", function(){
     var offset = $(this).offset();
     var left = (e.pageX - offset.left);
     var totalWidth = $("#custom-seekbar").width();
@@ -22,11 +22,11 @@ $("#custom-seekbar").on("click", function(togglePlayPause){
     vid.currentTime = vidTime;
 });
 
-$("#custom-seekbar02").on("click", function(togglePlayPause02){
+$("#custom-seekbar02").on("click", function(){
     var offset02 = $(this).offset();
-    var left02 = (e.pageX - offset.left);
+    var left02 = (e.pageX - offset02.left);
     var totalWidth02 = $("#custom-seekbar02").width();
-    var percentage02 = ( left / totalWidth02 );
+    var percentage02 = ( left02 / totalWidth02 );
     var vidTime02 = vid02.duration * percentage02;
     vid02.currentTime = vidTime02;
 });
