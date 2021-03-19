@@ -26,7 +26,9 @@ function togglePlayPause(){
 		btn.className = "play";
 		video.pause();
 	}
+}
 
+function togglePlayPause02(){
 	if(video02.paused){
 		btn02.className = "pause";
 		video02.play();
@@ -34,14 +36,13 @@ function togglePlayPause(){
 		btn02.className = "play";
 		video02.pause();
 	}
-}
 
 btn.onclick = function() {
 	// console.log("play!!!");
 	togglePlayPause();
 };
 
-btn02.onclick = function() {
+btn02.onclick = function02() {
 	// console.log("play!!!");
 	togglePlayPause();
 };
