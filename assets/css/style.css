@@ -677,9 +677,9 @@ a .active {
 }
 
 @media only screen and (min-width: 880px) {
-  .demoText p{
+  /*.demoText p{
     font-size: 4.1vw;
-  }
+  }*/
 
   p {
     font-size: 2.8vw;
@@ -687,9 +687,9 @@ a .active {
 }
 
 @media only screen and (max-width: 880px) {
-  .demoText p{
+  /*.demoText p{
     font-size: 4vw;
-  }
+  }*/
 
   p {
     font-size: 3vw;
@@ -720,9 +720,9 @@ a .active {
     font-size: 5vw;
   }
 
-  .demoText p{
+  /*.demoText p{
     font-size: 5vw;
-  }
+  }*/
 
   .section p{
     font-size: font-size: 5vw;
