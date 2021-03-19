@@ -8,11 +8,6 @@ vid.ontimeupdate = function(){
   $("#custom-seekbar span").css("width", percentage+"%");
 };
 
-vid02.ontimeupdate = function(){
-  var percentage02 = ( vid02.currentTime / vid02.duration ) * 100;
-  $("#custom-seekbar span").css("width", percentage02+"%");
-};
-
 $("#custom-seekbar").on("click", function(e){
     var offset = $(this).offset();
     var left = (e.pageX - offset.left);
