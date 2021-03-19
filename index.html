@@ -48,20 +48,19 @@
 </div>
     <a class="btnIntro" href="index_Home.html" style="z-index:20 !important;">SKIP INTRO</a>
 
-<script>
-  // Show loading animation.
-  var playPromise = video.play();
+    <button onclick="enableMute()" type="btn" style="z-index:20 !important;">Mute sound</button>
+    <button onclick="disableMute()" type="btn" style="z-index:20 !important;">Enable sound</button>
 
-  if (playPromise !== undefined) {
-    playPromise.then(_ => {
-      // Automatic playback started!
-      // Show playing UI.
-    })
-    .catch(error => {
-      // Auto-play was prevented
-      // Show paused UI.
-    });
-  }
+<script>
+  var vid = document.getElementById("myVideo");
+
+  function enableMute() { 
+    vid.muted = true;
+  } 
+
+  function disableMute() { 
+    vid.muted = false;
+  } 
 </script>
 
 </body>
