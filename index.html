@@ -35,27 +35,50 @@
       /*overflow: hidden;*/
     }
 
+    .buttonsPlayPause {
+      position: absolute;
+      width: 100;
+      height:100;
+      z-index: 0 !important;
+    }
+
+    .buttonsPlayPause button{
+      background: none;
+      border: 0;
+      outline: 0;
+      cursor: pointer;
+      position: absolute;
+      margin:0;
+    }
+
+    .buttonsPlayPause button:before{
+      display: inline-block;
+    }
+
+    .buttonsPlayPause button.play:before{
+    }
+
+    .buttonsPlayPause button.pause:before{
+    }
+
   </style>
 </head>
 
 <body>
 <div class="containerVideo">
 <div class="c-video">
-  <video id="video_background" class="video" preload="true">
-      <source src="https://chiaracrivelli.github.io/E_motion/assets/video/Emotion_Trailer.mp4" type="video/mp4">
-  </video>
+<video id="video" width="100%">
+    <source class="video" src="https://chiaracrivelli.github.io/E_motion/assets/video/Emotion_Trailer.mp4" type="video/mp4">
+</video>
+
+<div class="controls">
+    <div class="buttonsPlayPause">
+      <button id="play-pause"></button>
+    </div>
+</div>
 </div>
 </div>
     <a class="btnIntro" href="index_Home.html" style="z-index:20 !important;">SKIP INTRO</a>
-
-<script>
-    var video = document.getElementById("video_background");
-    video.addEventListener("canplay", function() {
-      setTimeout(function() {
-        video.play();
-      }, 2000);
-    });
-</script>
 
 </body>
 </html>
