@@ -65,6 +65,34 @@
     .buttonsPlayPause button.pause:before{
     }
 
+    .timeline__drag {
+        width: 0px;
+        height: 0px;
+        background-color: none;
+        position: absolute;
+        z-index: -40;
+        transform-origin:0;
+      }
+
+      #custom-seekbar
+      {  
+        cursor: pointer;
+        height: 0px;
+        margin-bottom: 0px;
+        outline: none;
+        overflow: hidden;
+        position: relative;
+      }
+      #custom-seekbar span
+      {
+        background-color: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 0px;
+        width: 0px;
+      }
+
   </style>
 </head>
 
