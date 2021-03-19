@@ -1,7 +1,7 @@
 var vid = document.getElementById("video");
 var vid02 = document.getElementById("video02");
 var btn = document.getElementById('play-pause');
-var btn02 = document.getElementById('play-pause');
+var btn02 = document.getElementById('play-pause02');
 
 vid.ontimeupdate = function(){
   var percentage = ( vid.currentTime / vid.duration ) * 100;
