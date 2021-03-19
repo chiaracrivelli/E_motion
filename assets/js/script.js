@@ -44,5 +44,5 @@ function togglePlayPause02(){
 
 btn02.onclick = function() {
 	// console.log("play!!!");
-	togglePlayPause();
+	togglePlayPause02();
 };
