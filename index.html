@@ -38,10 +38,10 @@
     .controls {
       display: flex;
       position: absolute;
+      top: 7vw;
       flex-wrap: wrap;
       width: 100%;
-      height: 100%;
-      background-color: (255,255,255,0);
+      background-color: black;
       /*transform: translateY(100%) translateY(-5px); */
     }
 
@@ -82,6 +82,36 @@
     .buttonsPlayPause02 button.pause:before{
       content: "";
     }
+
+    .timeline__drag02 {
+        width: 1px;
+        height: 20px;
+        top: -10px;
+        background-color: yellow;
+        position: absolute;
+        z-index: 2;
+        transform-origin: 0 0;
+      }
+
+      #custom-seekbar02
+      {  
+        cursor: pointer;
+        height: 3px;
+        margin-bottom: 10px;
+        outline: none;
+        overflow: hidden;
+        position: relative;
+        width: 100%;
+      }
+      #custom-seekbar02 span
+      {
+        background-color: white;
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 3px;
+        width: 0px;
+      }
 
   </style>
 </head>

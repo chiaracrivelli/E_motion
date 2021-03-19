@@ -5,7 +5,12 @@ var btn02 = document.getElementById('play-pause02');
 
 vid.ontimeupdate = function(){
   var percentage = ( vid.currentTime / vid.duration ) * 100;
-  $("#custom-seekbar span").css("width", percentage+"%");
+  $("#custom-seekbar span").css("width", percentage + "%");
+};
+
+vid02.ontimeupdate = function(){
+  var percentage02 = ( vid02.currentTime / vid02.duration ) * 100;
+  $("#custom-seekbar02 span").css("width", percentage02 + "%");
 };
 
 $("#custom-seekbar").on("click", function(e){
@@ -15,7 +20,16 @@ $("#custom-seekbar").on("click", function(e){
     var percentage = ( left / totalWidth );
     var vidTime = vid.duration * percentage;
     vid.currentTime = vidTime;
-});//click()
+});
+
+$("#custom-seekbar02").on("click", function(e){
+    var offset02 = $(this).offset();
+    var left02 = (e.pageX - offset.left);
+    var totalWidth02 = $("#custom-seekbar02").width();
+    var percentage02 = ( left / totalWidth02 );
+    var vidTime02 = vid02.duration * percentage02;
+    vid02.currentTime = vidTime02;
+});
 
 
 function togglePlayPause(){
