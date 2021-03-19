@@ -1,9 +1,9 @@
 var vid02 = document.getElementById("video02");
 var btn02 = document.getElementById('play-pause');
 
-vid02.ontimeupdate = function(){
+vid02.ontimeupdate = function02(){
   var percentage02 = ( vid02.currentTime / vid02.duration ) * 100;
-  $("#custom-seekbar02 span").css("width", percentage+"%");
+  $("#custom-seekbar02 span").css("width", percentage02+"%");
 };
 
 $("#custom-seekbar02").on("click", function(e){
