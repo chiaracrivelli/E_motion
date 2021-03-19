@@ -199,10 +199,6 @@ a .active {
   z-index: -10 !important;
 }
 
-.demo-text p{
-  font-size: 2.8vw;
-}
-
 /*.smile-text {
   font-family: "E_motion", sans-serif;
 
@@ -677,23 +673,23 @@ a .active {
 }
 
 @media only screen and (min-width: 880px) {
-  .demoText p{
+  /*.demoText p{
     font-size: 4.1vw;
   }
 
   p {
     font-size: 2.8vw;
-  }
+  }*/
 }
 
 @media only screen and (max-width: 880px) {
-  .demoText p{
+  /*.demoText p{
     font-size: 4vw;
-  }
+  }*/
 
-  p {
+  /*p {
     font-size: 3vw;
-  }
+  }*/
 }
 
 @media only screen and (max-width: 535px) {
@@ -702,7 +698,7 @@ a .active {
     font-size: 3rem;
   }*/
 
-  .topnav a{
+  /*.topnav a{
     width: 6rem;
     height: 2.2rem;
   }
@@ -718,17 +714,17 @@ a .active {
 
   p {
     font-size: 5vw;
-  }
+  }*/
 
-  .demoText p{
+  /*.demoText p{
     font-size: 5vw;
-  }
+  }*/
 
-  .section p{
+  /*.section p{
     font-size: font-size: 5vw;
   }
 
   .btn {
     margin-right: 0rem;
-  }
+  }*/
 }
