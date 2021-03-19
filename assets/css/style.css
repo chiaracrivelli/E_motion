@@ -644,10 +644,12 @@ a .active {
 }
 
 @media only screen and (max-width: 1920px) {
-  .demoText p{
-    font-size: 2.2vw;
+  p {
+    font-size: 1.8vw;
   }
+}
 
+@media only screen and (max-width: 1080px) {
   p {
     font-size: 3.8vw;
   }
