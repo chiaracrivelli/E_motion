@@ -41,7 +41,7 @@
 <body>
 <div class="containerVideo">
 <div class="c-video">
-  <video id="vid" class="video" autoplay>
+  <video id="video" class="video" autoplay>
       <source src="https://chiaracrivelli.github.io/E_motion/assets/video/Emotion_Trailer.mp4" type="video/mp4">
   </video>
 </div>
@@ -49,7 +49,19 @@
     <a class="btnIntro" href="index_Home.html" style="z-index:20 !important;">SKIP INTRO</a>
 
 <script>
-    document.getElementById('vid').play();
+  // Show loading animation.
+  var playPromise = video.play();
+
+  if (playPromise !== undefined) {
+    playPromise.then(_ => {
+      // Automatic playback started!
+      // Show playing UI.
+    })
+    .catch(error => {
+      // Auto-play was prevented
+      // Show paused UI.
+    });
+  }
 </script>
 
 </body>
