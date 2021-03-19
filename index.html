@@ -48,18 +48,18 @@
 </div>
     <a class="btnIntro" href="index_Home.html" style="z-index:20 !important;">SKIP INTRO</a>
 
-    <button onclick="enableMute()" type="btn" style="z-index:20 !important;">Mute sound</button>
-    <button onclick="disableMute()" type="btn" style="z-index:20 !important;">Enable sound</button>
+    <button class="btnIntro" onclick="enableMute()" type="btn" style="z-index:20 !important;">Mute sound</button>
+    <button class="btnIntro" onclick="disableMute()" type="btn" style="z-index:20 !important;">Enable sound</button>
 
 <script>
-  var vid = document.getElementById("myVideo");
+  var video = document.getElementById("myVideo");
 
   function enableMute() { 
-    vid.muted = true;
+    video.muted = true;
   } 
 
   function disableMute() { 
-    vid.muted = false;
+    video.muted = false;
   } 
 </script>
 
