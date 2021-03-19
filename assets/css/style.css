@@ -126,7 +126,7 @@ a .active {
   bottom: 1rem;
   right: 1rem;
 
-  background-color: rgb(255,255,255,0.3);
+  background-color: rgb(255,255,255,0.75);
 
   border: 1px solid rgb(255,255,255,1);
 
@@ -142,10 +142,10 @@ a .active {
   text-decoration: none;
 
   width: 10rem;
-  height: 5.2rem;
+  height: 3.2rem;
 
-  border-radius: 4px;
-  color: black;
+  border-radius: 0px;
+  color: white;
 
   z-index: 10;
 }
